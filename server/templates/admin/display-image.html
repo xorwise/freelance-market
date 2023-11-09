@@ -1,0 +1,12 @@
+<div class="d-flex flex-wrap">
+    {% for image in (data if field.multiple else [data]) %}
+        <div class="mx-1 my-2">
+            <img
+                    style="width: auto; height: 5em; object-fit: cover"
+                    src="{{ request.base_url }}{{ image }}"
+                    class="img-fluid rounded me-3 d-block"
+                    alt="{{ image }}"
+            />
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+
+<p>Здравствуйте, {{first_name}}</p>
+<p>
+    Введите данный код подтверждения в личном кабинете на сайте!
+
+</p>
+    <div class="code-container">
+        <div class="code-box">
+            <h2 class="code">{{ code }}</h2>
+        </div>
+    </div>
+
+{% endblock %}

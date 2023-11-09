@@ -1,0 +1,9 @@
+{% if data | is_iter %}
+    <ul>
+        {% for value in data %}
+            <li>{{ value * 100 }}%</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    {{ data * 100 }}%
+{% endif %}

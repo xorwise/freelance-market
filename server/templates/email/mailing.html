@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3>Здравствуйте, {{first_name}}</h3>
+<p>
+    {% if type == 2 %}
+    <p>Вам пришла новая заявка #{{ entity_id }}</p>
+    {% elif type == 3 %}
+        <p>Вам пришел новый заказ #{{ entity_id }}</p>
+    {% endif %}
+</p>
+
+    <div class="code-container">
+        <div class="code-box">
+            <h2 class="code">{{ code }}</h2>
+        </div>
+    </div>
+
+{% endblock %}
